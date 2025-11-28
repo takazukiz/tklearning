@@ -1,1 +1,140 @@
+@charset "UTF-8";
 
+/* --- レイアウトの基本設定 --- */
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #159E86;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+header a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* --- 設立の経緯エリアのCSS --- */
+
+.intro-area {
+    /* 下のタブと同じ横幅設定 */
+    max-width: 1000px;
+    margin: 20px auto 0; /* 上に20px、左右中央、下は0 */
+    padding: 0 20px; /* スマホで見た時に端がくっつかないように */
+    box-sizing: border-box; /* paddingを含めた幅計算にする */
+}
+
+.intro-content {
+    background-color: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 下のタブと同じ影 */
+    border-radius: 4px; /* 角を少し丸くする */
+}
+
+.intro-content h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #0056b3; /* 下線でアクセント */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.intro-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* --- タブ機能のCSS --- */
+
+/* 全体を囲むコンテナ（ここで左右に並べる） */
+.tab-container {
+    display: flex; /* 横並びにする指定 */
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 400px; /* コンテンツが少なくても高さを確保 */
+}
+
+/* 左側のメニューエリア */
+.tab-menu {
+    width: 200px; /* 左カラムの幅 */
+    background-color: #eee;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0; /* 幅が縮まないようにする */
+}
+
+/* メニューのボタン */
+.tab-button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+/* 選択中のボタンのデザイン */
+.tab-button.active {
+    background-color: #fff;
+    color: #0056b3;
+    font-weight: bold;
+    /* 右の境界線を消してコンテンツと繋がっているように見せるハック */
+    border-right: 1px solid #fff; 
+    margin-right: -1px;
+    position: relative; 
+}
+
+/* 右側のコンテンツエリア */
+.tab-content {
+    flex-grow: 1; /* 残りの幅いっぱいを使う */
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* セクションの表示制御 */
+.tab-panel {
+    display: none; /* 基本は隠す */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* activeクラスがついているセクションだけ表示 */
+.tab-panel.active {
+    display: block;
+}
+
+/* ふわっと表示させるアニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto;
+}
