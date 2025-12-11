@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,119 +9,16 @@
 </head>
 <body>
     <header>
-        <h1>ようこそ！たかずき先生による実力至上主義の教室へ！！</h1>
-        <a href="game/index.html">サブゲーム</a>
-    </header>
-
-    <section class="intro-area">
-        <div class="intro-content">
-            <h2>実力至上主義とは</h2>
-            <p>
-                知力こそ力！！ということ！<br>
-                ここではたかずき先生の作ったテストが受けれます！<br>
-                服少なく(黒パーカーで十分)、机導入、もの少なく
-            </p>
-        </div>
-    </section>
-
-    <main>
-        <!-- タブ機能全体のラッパー -->
-        <div class="tab-container">
-            
-            <!-- 左側：タブメニュー -->
-            <nav class="tab-menu">
-                <!-- activeクラスがついているのが現在選択されているタブ -->
-                <button class="tab-button active" onclick="openTab(event, 'section1')">算数</button>
-                <button class="tab-button" onclick="openTab(event, 'section2')">英語</button>
-                <button class="tab-button" onclick="openTab(event, 'section3')">漢字</button>
-                <button class="tab-button" onclick="openTab(event, 'section4')">日本史</button>
-            </nav>
-
-            <!-- 右側：コンテンツ内容 -->
-            <div class="tab-content">
-                <!-- セクション1（初期表示） -->
-                <section id="section1" class="tab-panel active">
-                    <h2>セクション1（算数）</h2>
-                    <p>算数のテストまだできてない！</p>
-                    <a href="math.html">算数ページへ</a>
-                </section>
-
-                <!-- セクション2 -->
-                <section id="section2" class="tab-panel">
-                    <h2>セクション2（英語）</h2>
-                    <p>英語のテストでは、出題範囲の中でも特にむずそうな単語を<br>
-                        たかずき先生が選んで英文にしました！<br>
-                        読めるかな？？
-                    </p>
-                    <a href="english.html">英語ページへ</a>
-                </section>
-
-                <!-- セクション3 -->
-                <section id="section3" class="tab-panel">
-                    <h2>セクション3（漢字）</h2>
-                    <p>漢字のテストまだできてない！</p>
-                    <a href="kanji.html">漢字ページへ</a>
-                </section>
-
-                <!-- セクション4 -->
-                <section id="section4" class="tab-panel">
-                    <h2>セクション4（日本史）</h2>
-                    <p>日本史のテストどうやってつくるねん</p>
-                    <a href="nihonsi.html">日本史ページへ</a>
-                </section>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 たかずきページ</p>
-    </footer>
-
-    <!-- タブ切り替えのスクリプト -->
-    <script>
-        function openTab(evt, sectionId) {
-            // 1. すべてのタブパネルを隠す
-            const panels = document.getElementsByClassName("tab-panel");
-            for (let i = 0; i < panels.length; i++) {
-                panels[i].classList.remove("active");
-            }
-
-            // 2. すべてのタブボタンから active クラスを外す
-            const buttons = document.getElementsByClassName("tab-button");
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove("active");
-            }
-
-            // 3. クリックされたボタンと、対象のセクションに active クラスをつける
-            document.getElementById(sectionId).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
-</body>
-
-</html>
-=======
-w<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TKLearning</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <h1>ようこそ！たかずき先生による実力至上主義の教室へ！！</h1>
+        <h1>勉強法についてのメモ</h1>
         <a href="games/index.html">サブゲーム</a>
     </header>
 
     <section class="intro-area">
         <div class="intro-content">
-            <h2>12/8</h2>
+            <h2>すべての勉強に通じること</h2>
             <p>
-                New! 英語のテストを作りました！<br>
-                ここではたかずき先生の作ったテストが受けれます！
+                勉強は最初はおもろいけど飽きるのは当たり前<br>
+                復習という名のめんどくさい繰り返し作業<br>
             </p>
         </div>
     </section>
@@ -145,16 +41,14 @@ w<!DOCTYPE html>
                 <!-- セクション1（初期表示） -->
                 <section id="section1" class="tab-panel active">
                     <h2>セクション1（算数）</h2>
-                    <p>算数のテストまだできてない！</p>
+                    <p>算数の勉強法について</p>
                     <a href="math.html">算数ページへ</a>
                 </section>
 
                 <!-- セクション2 -->
                 <section id="section2" class="tab-panel">
                     <h2>セクション2（英語）</h2>
-                    <p>英語のテストでは、出題範囲の中でも特にむずそうな単語を<br>
-                        たかずき先生が選んで英文にしました！<br>
-                        読めるかな？？
+                    <p>英語の勉強法について<br>
                     <a href="english.html">英語ページへ</a>
                 </section>
 
@@ -204,6 +98,3 @@ w<!DOCTYPE html>
 </html>
 
 
-
-
->>>>>>> 4a9170c154ffe38771aed3e3e71214e9b0b877c0
